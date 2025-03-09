@@ -14,10 +14,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Expose the port on which Gunicorn will listen
-EXPOSE 8000
+EXPOSE 5000
 
 # Run Gunicorn to serve the Flask WSGI application
 # Here, we point Gunicorn to the app factory function 'create_app' in 'app/__init__.py'
 # by referencing it through 'main:create_app()'.
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "main:create_app()"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "main:create_app()"]
 
