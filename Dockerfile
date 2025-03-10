@@ -1,9 +1,15 @@
 # Start from a lightweight Python image
 FROM python:3.13-slim
 
-RUN python3 -m venv env
-RUN source ./env/bin/activate
 # Set the working directory
+WORKDIR /app
+
+# Create a virtual environment and activate it
+RUN python3 -m venv env && \
+    . env/bin/activate
+
+# Ensure the virtual environment is used for subsequent commands
+ENV PATH="/app/env/bin:$PATH"
 WORKDIR /app
 
 # Copy requirements first (for efficient caching)
