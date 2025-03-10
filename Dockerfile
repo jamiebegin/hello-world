@@ -1,6 +1,8 @@
 # Start from a lightweight Python image
 FROM python:3.13-slim
 
+RUN python3 -m venv env
+RUN source ./env/bin/activate
 # Set the working directory
 WORKDIR /app
 
