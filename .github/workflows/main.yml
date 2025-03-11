@@ -40,7 +40,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: "arn:aws:ecs:us-east-1:703671924104:task-definition/FedSeekTaskDef:17"
+          task-definition-arn: "arn:aws:ecs:us-east-1:703671924104:task-definition/FedSeekTaskDef:17"
           container-name: fedseek-container
           image: ${{ steps.build-image.outputs.image }}
   
