@@ -48,6 +48,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: MyECSService-FedSeek-ECS-1LPUU94C8V607
-          cluster: ECS-FedSeek-ECS-1LPUU94C8V607
+          service: MyECSService-FedSeek-ECS-125CUTS08I0O0
+          cluster: ECS-FedSeek-ECS-125CUTS08I0O0
           wait-for-service-stability: true
