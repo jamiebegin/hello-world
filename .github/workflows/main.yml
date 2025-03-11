@@ -49,5 +49,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           cluster: FedSeek-ECS-Cluster
-          service: FedSeek-ECS
+          service: FedSeek-ECS-Service
           wait-for-service-stability: true
