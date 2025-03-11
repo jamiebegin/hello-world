@@ -10,3 +10,6 @@ def hello_world():
 def health_check():
     return "Ok"
 
+@main_bp.route("/login")
+def login():
+    return "The login form goes here."
