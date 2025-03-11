@@ -8,7 +8,7 @@ def hello_world():
 
 @main_bp.route("/health-check")
 def health_check():
-    return "<h1>It's all good, man! :-)</h1>"
+    return "<h1>It's all good, man...</h1>"
 
 @main_bp.route("/login")
 def login():
