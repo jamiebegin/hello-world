@@ -1,5 +1,6 @@
 # Start from a lightweight Python image
-FROM python:3.13-slim
+# FROM python:3.13-slim
+FROM public.ecr.aws/docker/library/python:3.13.2-slim
 
 # Set the working directory
 WORKDIR /app
