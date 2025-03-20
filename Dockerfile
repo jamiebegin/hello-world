@@ -1,6 +1,7 @@
 # Start from a lightweight Python image
 # FROM python:3.13-slim
 FROM public.ecr.aws/docker/library/python:3.13.2-slim
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
 WORKDIR /app
